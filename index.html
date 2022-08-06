@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ch-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porn club</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+
+    <style>
+        body { margin: 0; background-color: black; color: white; box-sizing: border-box; }
+        a { color: white; text-decoration: none; }
+        button { cursor: pointer; border: 0; border-radius: 8px; transition: all .3s ease; }
+        img { max-width: 100%; max-height: 100%; }
+
+        header { padding: 20px 40px; display: flex; }
+        .logo { flex: 1; min-width: 150px; height: 30px; cursor: pointer; transition: all .3s ease; }
+        .logo:hover { opacity: 80%; }
+        .search { flex: 800px; }
+        input { width: 500px; height: 36px; background-color: #545251; color: white; font-size: 1.25em; padding: 0 8px; border: none; border-top-left-radius: 8px; border-bottom-left-radius: 8px; }
+        .search-btn { height: 36px; width: 80px; border-top-left-radius: 0; border-bottom-left-radius: 0; background-color: #e75525; transform: translateY(3px) translateX(-4px); }
+        .search-btn:hover { background-color: #BA441D; }
+        .upload, .upgrade { margin-left: 10px; height: 36px; width: 80px; display: inline-flex; align-items: center; justify-content: center; text-align: center; font-weight: 700; }
+        .upload { background-color: #1f1f1f; color: white; }
+        .upload:hover { background-color: #333333; }
+        .upgrade { background-color: #e75525; color: black; }
+        .upgrade:hover { background-color: #BA441D; }
+        .login {flex: 1; text-align: right;}
+
+        .card { background-color: #dcdddd; margin: 0 20px; padding: 5px; }
+        .list { background-color: black; margin: 0; padding: 40px; display: flex; flex-wrap: wrap; list-style-type: none; }
+        .list > li { flex: calc(16.6% - 24px); padding: 12px; text-align: center; }
+        .list img { cursor: pointer; }
+
+        .ad { display: block; text-align: center; margin: 20px auto; padding: 20px; width: 700px; }
+
+        main#index { display: inlineine; }
+        main#inpage, main#not-found { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img onclick="index()" src="img/logo.png" alt="Porn Club"></div>
+        <div class="search">
+            <input class="search-input" type="text">
+            <button onclick="notFound()" class="search-btn"><img src="img/search.png" alt="search"></button>
+            <button class="upload"><img src="img/upload.png">&nbsp;&nbsp;上傳</button>
+            <button class="upgrade"><img src="img/upgrade.png">&nbsp;&nbsp;升級</button>
+        </div>
+        <div class="login">
+            <a href="#">登入</a>　　<a href="#">註冊</a>
+        </div>
+    </header>
+    <main id="index">
+        <img src="img/header.png">
+        <div class="card">
+            <img src="img/title.png">
+            <ul class="list">
+                <li><img src="img/thumb-01.png"></li>
+                <li><img src="img/thumb-02.png"></li>
+                <li><img src="img/thumb-03.png"></li>
+                <li><img src="img/thumb-04.png"></li>
+                <li><img src="img/thumb-05.png"></li>
+                <li><img src="img/thumb-06.png"></li>
+                <li><img src="img/thumb-07.png"></li>
+                <li><img src="img/thumb-08.png"></li>
+                <li><img src="img/thumb-09.png"></li>
+                <li><img src="img/thumb-10.png"></li>
+                <li><img src="img/thumb-11.png"></li>
+                <li><img src="img/thumb-12.png"></li>
+                <li><img src="img/thumb-13.png"></li>
+                <li><img src="img/thumb-14.png"></li>
+                <li><img src="img/thumb-15.png"></li>
+                <li><img src="img/thumb-16.png"></li>
+                <li><img src="img/thumb-17.png"></li>
+                <li><img src="img/thumb-18.png"></li>
+                <li><img src="img/thumb-19.png"></li>
+                <li><img src="img/thumb-20.png"></li>
+                <li><img onclick="inpage()" src="img/thumb-21.png"></li>
+                <li><img src="img/thumb-22.png"></li>
+                <li><img src="img/thumb-23.png"></li>
+                <li><img src="img/thumb-24.png"></li>
+                <li><img src="img/thumb-25.png"></li>
+                <li><img src="img/thumb-26.png"></li>
+                <li><img src="img/thumb-27.png"></li>
+                <li><img src="img/thumb-28.png"></li>
+                <li><img src="img/thumb-29.png"></li>
+                <li><img src="img/thumb-30.png"></li>
+                <li><img src="img/thumb-31.png"></li>
+                <li><img src="img/thumb-32.png"></li>
+                <li><img src="img/thumb-33.png"></li>
+                <li><img src="img/thumb-34.png"></li>
+                <li><img src="img/thumb-35.png"></li>
+                <li><img src="img/thumb-36.png"></li>
+            </ul>
+        </div>
+        <div class="ad"><img src="img/ad.png"></div>
+    </main>
+    <main id="inpage"><img src="img/inpage.png"><div class="ad"><img src="img/ad.png"></div></main>
+    <main id="not-found"><img src="img/not-found.png"></main>
+    <footer>
+        <img src="img/footer.png">
+    </footer>
+
+
+
+    <script>
+        function index() {
+            document.querySelector('#not-found').style.display = 'none';
+            document.querySelector('#inpage').style.display = 'none';
+            document.querySelector('#index').style.display = 'inline';
+            window.scrollTo(0, 0);
+        }
+
+        function notFound() {
+            document.querySelector('#index').style.display = 'none';
+            document.querySelector('#inpage').style.display = 'none';
+            document.querySelector('#not-found').style.display = 'inline';
+            window.scrollTo(0, 0);
+        }
+
+        function inpage() {
+            document.querySelector('#index').style.display = 'none';
+            document.querySelector('#not-found').style.display = 'none';
+            document.querySelector('#inpage').style.display = 'inline';
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
